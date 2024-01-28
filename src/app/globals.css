@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-primary-xlg font-bold;
+  }
+  h2 {
+    @apply text-primary-lg font-semibold;
+  }
+  h3 {
+    @apply text-primary-md font-semibold;
+  }
+  h4 {
+    @apply text-primary-sm font-semibold;
+  }
+  h5 {
+    @apply text-primary-xsm font-semibold;
+  }
+  h6 {
+    @apply text-primary-xxsm font-semibold;
+  }
+}
