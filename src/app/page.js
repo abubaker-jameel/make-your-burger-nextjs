@@ -1,7 +1,18 @@
 import React from "react";
+import MainSectionContent from "./_containers/home/MainSectionContent";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <section className="container">
+      <MainSectionContent
+        title={"Make Your Burger"}
+        paragraph={
+          "Parallax screen. Burger ingredients and emojis moving depending on the position of the mouse pointer."
+        }
+        btnTitle={"Make Burger"}
+      />
+    </section>
+  );
 };
 
 export default Home;
