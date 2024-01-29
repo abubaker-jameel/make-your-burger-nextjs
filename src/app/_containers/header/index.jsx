@@ -26,7 +26,7 @@ function Header() {
     callMePhoneNumber,
     dropDown,
     toggleButton,
-  } = header({ isActive });
+  } = header({ isActive: isActive });
 
   return (
     <>
@@ -35,7 +35,7 @@ function Header() {
           <Logo color={"primary"} size={"lg"} className={logo()}>
             <span>a</span>
           </Logo>
-          <div className={menuWrapper(isActive)}>
+          <div className={menuWrapper()}>
             <PhoneNumber
               number={"8 800 437-87-22"}
               className={phoneNumberMobile()}
@@ -79,14 +79,9 @@ function Header() {
             handleClick={handleActive}
           >
             {isActive ? (
-              <Icon src="/icons/x.svg" width={10} height={10} alt="toggle-x" />
+              <Icon src="/icons/x.svg" alt="toggle-x" />
             ) : (
-              <Icon
-                src="/icons/bars.svg"
-                width={10}
-                height={10}
-                alt="toggle-bars"
-              />
+              <Icon src="/icons/bars.svg" alt="toggle-bars" />
             )}
           </Button>
         </div>
