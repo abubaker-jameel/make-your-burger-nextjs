@@ -22,3 +22,18 @@
     @apply text-primary-xxsm font-semibold;
   }
 }
+
+@layer utilities {
+  .position-unset {
+    position: unset;
+  }
+  .bg-unset {
+    background-color: unset;
+  }
+  .h-unset {
+    height: unset;
+  }
+  .w-unset {
+    width: unset;
+  }
+}
