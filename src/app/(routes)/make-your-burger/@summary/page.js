@@ -1,8 +1,12 @@
+"use client";
 import Button from "@/app/_components/Buttons/Button";
 import React from "react";
 import MainInfo from "./MainInfo";
+import { useBurger } from "@/app/_contexts/burgerContext";
 
 const Summary = () => {
+  const { burger } = useBurger();
+  console.log(burger.addedItems);
   return (
     <div className="flex flex-col justify-center p-10">
       <h3>Summary</h3>
@@ -10,7 +14,7 @@ const Summary = () => {
       <div>
         <div className="flex items-center justify-between">
           <span className="text-primary-md font-extrabold text-primary-indigo">
-            $0.00
+            ${burger.total.price}
           </span>
           <Button size="lg">Checkout</Button>
         </div>
@@ -19,7 +23,11 @@ const Summary = () => {
           Get a Gift
         </span>
       </div>
-      <MainInfo />
+      <MainInfo
+        time={burger.total.time}
+        weight={burger.total.weight}
+        energy={burger.total.energy}
+      />
     </div>
   );
 };
