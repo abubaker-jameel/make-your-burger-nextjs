@@ -9,6 +9,7 @@ export default {
       time: 1,
       weight: 5,
       energy: 20,
+      count: 0,
     },
     {
       id: 14,
@@ -18,6 +19,7 @@ export default {
       time: 1,
       weight: 3,
       energy: 5,
+      count: 0,
     },
     {
       id: 15,
@@ -27,6 +29,7 @@ export default {
       time: 1,
       weight: 2,
       energy: 4,
+      count: 0,
     },
     {
       id: 16,
@@ -36,6 +39,7 @@ export default {
       time: 1,
       weight: 2,
       energy: 10,
+      count: 0,
     },
     {
       id: 17,
@@ -45,6 +49,7 @@ export default {
       time: 1,
       weight: 4,
       energy: 7,
+      count: 0,
     },
     {
       id: 18,
@@ -54,6 +59,7 @@ export default {
       time: 1,
       weight: 5,
       energy: 15,
+      count: 0,
     },
     {
       id: 19,
@@ -63,6 +69,7 @@ export default {
       time: 1,
       weight: 2,
       energy: 12,
+      count: 0,
     },
     {
       id: 20,
@@ -72,6 +79,7 @@ export default {
       time: 1,
       weight: 3,
       energy: 1,
+      count: 0,
     },
   ],
 };
