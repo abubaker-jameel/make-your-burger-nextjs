@@ -74,7 +74,7 @@ function Header() {
           </DropDown>
           <Button
             color={"red"}
-            size={"lg"}
+            size={"sm"}
             className={toggleButton()}
             handleClick={handleActive}
           >
