@@ -11,14 +11,14 @@ const button = tv({
       red: "text-primary-danger bg-red-200 hover:bg-primary-danger hover:text-primary-titan-white focus-visible:bg-primary-danger focus-visible:text-primary-titan-white",
       titan:
         "text-primary-indigo bg-primary-titan-white hover:text-primary-titan-white hover:bg-primary-danger focus-visible:text-primary-titan-white focus-visible:bg-primary-danger",
-      hero: "bg-primary-indigo hover:bg-indigo-600 text-primary-white font-bold uppercase text-base xl:text-xl",
+      hero: "bg-primary-indigo hover:bg-indigo-600 text-primary-white font-bold uppercase text-sm md:text-base xl:text-xl",
     },
     size: {
       lg: "py-2 px-10",
       md: "py-4 px-6",
       sm: "py-2 px-4",
       xsm: "py-2 px-2",
-      hero: "py-6 px-6 xl:py-8 xl:px-8",
+      hero: "py-4 px-4 md:py-6 md:px-6 xl:py-8 xl:px-8",
     },
   },
   defaultVariants: {
