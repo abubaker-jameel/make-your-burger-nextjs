@@ -8,7 +8,7 @@ const Ingredients = () => {
   const ingredient = burger.data.map((item) => {
     return (
       <IngredientContent
-        key={item.key}
+        key={item.id}
         src={item.src}
         name={item.name}
         count={item.count}
@@ -18,7 +18,7 @@ const Ingredients = () => {
     );
   });
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-y-10 overflow-hidden whitespace-nowrap px-28 py-10">
+    <div className="my-10 grid grid-cols-[repeat(auto-fit,minmax(128px,1fr))] place-items-center gap-5 overflow-hidden">
       {ingredient}
     </div>
   );
