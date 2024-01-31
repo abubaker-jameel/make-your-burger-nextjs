@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={openSans.className}>
-      <body className="flex min-h-screen flex-col justify-between">
+      <body className="flex min-h-dvh flex-col justify-between">
         {
           <>
             <Header />

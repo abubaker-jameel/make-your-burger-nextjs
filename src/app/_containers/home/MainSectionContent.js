@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 const MainSectionContent = ({ title, paragraph, btnTitle }) => {
   return (
-    <div className="relative min-h-[clamp(600px,80dvh,100vh)] xl:grid xl:grid-cols-[600px_minmax(500px,_1fr)]">
+    <div className="relative min-h-[clamp(600px,80dvh,100dvh)] xl:grid xl:grid-cols-[600px_minmax(500px,_1fr)]">
       <div className="mt-4 flex flex-col xl:justify-center">
         <Typography variant="h1" className="leading-none xl:max-w-min">
           {title}
