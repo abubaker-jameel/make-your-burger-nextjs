@@ -3,7 +3,7 @@ import MainSectionContent from "./_containers/home/MainSectionContent";
 
 const Home = () => {
   return (
-    <section className="container min-h-[80vh]">
+    <section className="container min-h-[80dvh]">
       <MainSectionContent
         title={"Make Your Burger"}
         paragraph={
