@@ -46,6 +46,12 @@ const Typography = ({ children, variant, className }) => {
           {children}
         </p>
       );
+    case "type36":
+      return (
+        <span className={typography({ className: className, extra: "type36" })}>
+          {children}
+        </span>
+      );
     default:
       break;
   }

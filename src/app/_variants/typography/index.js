@@ -13,6 +13,9 @@ const typography = tv({
     paragraph: {
       p: "text-base",
     },
+    extra: {
+      type36: "text-2xl md:text-3xl lg:text-4xl",
+    },
   },
 });
 
