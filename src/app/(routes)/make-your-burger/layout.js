@@ -8,17 +8,15 @@ export const metadata = {
 
 export default function MakeYourBurgerLayout({ children, burger, summary }) {
   return (
-    <>
-      <BurgerProvider>
-        <section className="container">
-          <div className="grid lg:min-h-[570px] lg:grid-cols-[1fr_500px_1fr]">
-            {children}
-            {burger}
-            {summary}
-          </div>
-          <Ingredients />
-        </section>
-      </BurgerProvider>
-    </>
+    <BurgerProvider>
+      <section className="container">
+        <div className="grid min-h-[500px] lg:grid-cols-[1fr_500px_1fr]">
+          {children}
+          {burger}
+          {summary}
+        </div>
+        <Ingredients />
+      </section>
+    </BurgerProvider>
   );
 }
