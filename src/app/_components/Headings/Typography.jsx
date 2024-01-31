@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { typography } from "@/app/_variants/typography";
 
 const Typography = ({ children, variant, className }) => {
@@ -48,6 +49,13 @@ const Typography = ({ children, variant, className }) => {
     default:
       break;
   }
+};
+
+Typography.propTypes = {
+  children: PropTypes.node.isRequired,
+  variant: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6", "p"])
+    .isRequired,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
 
 export default Typography;
