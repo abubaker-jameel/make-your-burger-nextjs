@@ -2,7 +2,7 @@ import React from "react";
 import footerData from "@/app/_data/footerData";
 
 const LeftFooterList = () => {
-  const navItem = footerData.data.map((item) => {
+  const leftFooterItem = footerData.data.map((item) => {
     return (
       <li
         key={item.id}
@@ -12,7 +12,7 @@ const LeftFooterList = () => {
       </li>
     );
   });
-  return <ul className="flex items-center justify-start">{navItem}</ul>;
+  return <ul className="flex items-center justify-start">{leftFooterItem}</ul>;
 };
 
 export default LeftFooterList;
