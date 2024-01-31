@@ -12,7 +12,7 @@ const LeftFooterList = () => {
       </li>
     );
   });
-  return <ul className="flex items-center justify-start">{navItem}</ul>;
+  return <ul className="flex items-center justify-start">{leftFooterItem}</ul>;
 };
 
 export default LeftFooterList;
