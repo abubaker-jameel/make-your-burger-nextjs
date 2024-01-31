@@ -6,7 +6,7 @@ import DropDown from "@/app/_components/DropDown/DropDown";
 import Icon from "@/app/_components/Icons/Icon";
 import useActive from "@/app/_hooks/useActive";
 import React from "react";
-import NavItem from "./NavItem";
+import NavItems from "./NavItems";
 import PhoneNumber from "@/app/_components/Utilities/PhoneNumber";
 import { header } from "./headerStyle";
 
@@ -42,7 +42,7 @@ function Header() {
             />
             <nav className={nav()}>
               <ul className={navList()}>
-                <NavItem />
+                <NavItems />
               </ul>
             </nav>
             <div className={avatarWrapper()}>
