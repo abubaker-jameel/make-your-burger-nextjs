@@ -1,11 +1,10 @@
 "use client";
-
 import React from "react";
 import navData from "@/app/_data/navData";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const NavItem = () => {
+const NavItems = () => {
   const pathname = usePathname();
 
   // nav items
@@ -13,7 +12,7 @@ const NavItem = () => {
     return (
       <li
         key={item.id}
-        className="text-primary-black lg:[&:not(:last-child)]:mr-14"
+        className="text-primary-black [&:not(:last-child)]:mb-10 lg:[&:not(:last-child)]:mb-0  lg:[&:not(:last-child)]:mr-14"
       >
         <Link
           href={item.href}
@@ -28,4 +27,4 @@ const NavItem = () => {
   return navItem;
 };
 
-export default NavItem;
+export default NavItems;

@@ -33,7 +33,22 @@
   .h-unset {
     height: unset;
   }
+  .min-h-unset {
+    min-height: unset;
+  }
   .w-unset {
     width: unset;
+  }
+  .top-unset {
+    bottom: unset;
+  }
+  .right-unset {
+    right: unset;
+  }
+  .bottom-unset {
+    bottom: unset;
+  }
+  .left-unset {
+    left: unset;
   }
 }
