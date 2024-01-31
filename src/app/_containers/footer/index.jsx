@@ -4,7 +4,7 @@ import RightFooterList from "./RightFooterList";
 
 const Footer = () => {
   return (
-    <footer className="container flex w-full flex-col items-center justify-center md:flex-row md:justify-between">
+    <footer className="container my-4 flex w-full flex-col items-center justify-center md:flex-row md:justify-between">
       <LeftFooterList />
       <RightFooterList />
     </footer>
