@@ -13,8 +13,7 @@ const header = tv({
     callWrapper: "flex items-center justify-end lg:basis-1/2 lg:[&>*]:mr-14",
     callMePhoneNumber: "hidden lg:inline-block",
     dropDown: "hidden aspect-square lg:block",
-    toggleButton:
-      "aspect-square lg:hidden [&>*]:!position-unset [&>*]:!h-3 [&>*]:!w-3 bg-primary-titan-white",
+    toggleButton: "aspect-square lg:hidden bg-primary-titan-white",
   },
   variants: {
     isActive: {
