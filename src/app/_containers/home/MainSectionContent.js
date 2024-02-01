@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Button from "@/app/_components/Buttons/Button";
 import Typography from "@/app/_components/Typography/Typography";
 import PropTypes from "prop-types";
+import CircleBtn from "./CircleBtn";
 
 const MainSectionContent = ({ title, paragraph, btnTitle }) => {
   return (
@@ -19,13 +19,7 @@ const MainSectionContent = ({ title, paragraph, btnTitle }) => {
         <Image src="/images/main-img.svg" fill className="hidden xl:block" />
         <Image src="/images/main-img-mob.svg" fill className="xl:hidden" />
       </div>
-      <Button
-        color="hero"
-        size="hero"
-        className="absolute right-1/2 top-[60%] aspect-square translate-x-1/2 xl:translate-x-0"
-      >
-        <span className="inline-block max-w-min">{btnTitle}</span>
-      </Button>
+      <CircleBtn btnTitle={btnTitle} />
     </div>
   );
 };
