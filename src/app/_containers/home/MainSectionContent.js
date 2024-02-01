@@ -16,8 +16,20 @@ const MainSectionContent = ({ title, paragraph, btnTitle }) => {
         </Typography>
       </div>
       <div className="relative h-[80dvh] xl:h-full">
-        <Image src="/images/main-img.svg" fill className="hidden xl:block" />
-        <Image src="/images/main-img-mob.svg" fill className="xl:hidden" />
+        <Image
+          src="/images/main-img.svg"
+          fill
+          className="hidden xl:block"
+          alt="main-img"
+          priority={true}
+        />
+        <Image
+          src="/images/main-img-mob.svg"
+          fill
+          className="xl:hidden"
+          alt="main-img-mobile"
+          priority={true}
+        />
       </div>
       <CircleBtn btnTitle={btnTitle} />
     </div>

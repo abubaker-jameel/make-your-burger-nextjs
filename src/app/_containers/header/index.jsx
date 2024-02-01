@@ -78,11 +78,13 @@ function Header() {
             className={toggleButton()}
             handleClick={handleActive}
           >
-            {isActive ? (
-              <Icon src="/icons/x.svg" alt="toggle-x" />
-            ) : (
-              <Icon src="/icons/bars.svg" alt="toggle-bars" />
-            )}
+            <span className="relative block h-4 w-4">
+              {isActive ? (
+                <Icon src="/icons/x.svg" alt="toggle-x" />
+              ) : (
+                <Icon src="/icons/bars.svg" alt="toggle-bars" />
+              )}
+            </span>
           </Button>
         </div>
       </header>
