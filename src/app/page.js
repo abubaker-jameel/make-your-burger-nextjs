@@ -1,5 +1,6 @@
 import React from "react";
 import MainSectionContent from "./_containers/home/MainSectionContent";
+import Typography from "./_components/Typography/Typography";
 
 const Home = () => {
   return (
