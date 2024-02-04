@@ -10,10 +10,25 @@ const IngredientContent = ({
   count,
   handleAddItem,
   handleRemoveItem,
+  itemId,
 }) => {
   // count returning true and false to disable buttons
   let addBtnDisabled = count >= 2 ? true : false;
   let removeBtnDisabled = count <= 0 ? true : false;
+
+  // add button
+  if (count >= 2 && itemId != 20) {
+    addBtnDisabled = true;
+  } else {
+    addBtnDisabled = false;
+  }
+
+  if (count >= 1 && itemId == 20) {
+    addBtnDisabled = true;
+  } else {
+    addBtnDisabled = false;
+  }
+
   return (
     <div className="w-32 rounded-3xl border-2 border-primary-black-squeeze px-4 py-6">
       <div className="flex h-full w-full flex-col justify-between">

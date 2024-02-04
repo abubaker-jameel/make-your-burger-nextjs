@@ -14,6 +14,7 @@ const Ingredients = () => {
         count={item.count}
         handleAddItem={() => handleAddItem(item.id)}
         handleRemoveItem={() => handleRemoveItem(item.id)}
+        itemId={item.id}
       />
     );
   });
