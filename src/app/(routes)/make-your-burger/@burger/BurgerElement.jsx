@@ -22,6 +22,7 @@ const BurgerElement = () => {
             objectFit: "contain",
             minHeight: "200px",
           }}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       );
     } else {
@@ -33,6 +34,7 @@ const BurgerElement = () => {
           alt={item.name}
           className={`${index + 1} p-2`}
           style={{ top: item.top, zIndex: index + 2, objectFit: "contain" }}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       );
     }
@@ -45,6 +47,7 @@ const BurgerElement = () => {
         fill
         alt="bun-bottom"
         style={{ zIndex: 1 }}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
     </div>
   );
