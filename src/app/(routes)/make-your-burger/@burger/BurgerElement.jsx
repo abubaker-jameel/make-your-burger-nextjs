@@ -1,26 +1,41 @@
 "use client";
+import React from "react";
 import { useBurger } from "@/app/_contexts/burgerContext";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
 
 const BurgerElement = () => {
   const { burger } = useBurger();
-
-  const cutletTop = -45;
-  const mayoTop = -18;
-  const onionTop = -30;
-  const tomatoeTop = -45;
+  console.log(burger);
 
   const burgerItem = burger.addedItems.map((item, index) => {
-    return (
-      <Image
-        src={item.src}
-        fill
-        alt={item.name}
-        className={`${burger.addedItems.length - index}`}
-        style={{ top: -35, zIndex: index + 2, objectFit: "contain" }}
-      />
-    );
+    if (item.id === 20) {
+      return (
+        <Image
+          key={item.id + 1}
+          src={item.src}
+          fill
+          alt={item.name}
+          className={`${index + 1} p-2`}
+          style={{
+            top: item.top,
+            zIndex: index + 2,
+            objectFit: "contain",
+            minHeight: "200px",
+          }}
+        />
+      );
+    } else {
+      return (
+        <Image
+          key={item.id + 1}
+          src={item.src}
+          fill
+          alt={item.name}
+          className={`${index + 1} p-2`}
+          style={{ top: item.top, zIndex: index + 2, objectFit: "contain" }}
+        />
+      );
+    }
   });
   return (
     <div className="relative top-[25rem] h-[22%] max-w-[300px] basis-full">
