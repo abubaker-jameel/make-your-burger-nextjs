@@ -28,7 +28,7 @@ const BurgerElement = () => {
     } else {
       return (
         <Image
-          key={item.id + 1}
+          key={item.id + index}
           src={item.src}
           fill
           alt={item.name}
