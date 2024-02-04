@@ -18,7 +18,12 @@ const IngredientContent = ({
     <div className="w-32 rounded-3xl border-2 border-primary-black-squeeze px-4 py-6">
       <div className="flex h-full w-full flex-col justify-between">
         <div className="relative min-h-10 basis-full object-contain">
-          <Image src={src} fill alt={name} />
+          <Image
+            src={src}
+            fill
+            alt={name}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
         <span className="my-4 inline-block text-center">{name}</span>
         <div className="flex items-center justify-between">
