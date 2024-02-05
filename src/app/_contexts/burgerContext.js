@@ -22,7 +22,22 @@ export const BurgerProvider = ({ children }) => {
       // add item
       case "ADD_ITEM":
         const itemIdToAdd = action.payload;
-        const addedItem = state.data.find((item) => item.id === itemIdToAdd);
+        const bunTopItem = state.addedItems.find((item) => {
+          return item.id == 20;
+        });
+
+        const addedItem = state.data.find((item) => {
+          if (item.id == itemIdToAdd && itemIdToAdd != 20 && !bunTopItem) {
+            return item;
+          }
+          if (
+            item.id == itemIdToAdd &&
+            itemIdToAdd == 20 &&
+            state.addedItems.length > 4
+          ) {
+            return item;
+          }
+        });
         let top;
 
         if (addedItem) {
@@ -263,7 +278,7 @@ export const BurgerProvider = ({ children }) => {
         let foundItemIndex = -1;
         for (let i = state.addedItems.length - 1; i >= 0; i--) {
           const item = state.addedItems[i];
-          if (item.id === itemIdToRemove && item.count > 0) {
+          if (item.id === itemIdToRemove && item.count >= 0) {
             foundItemIndex = i;
             break;
           }
@@ -271,8 +286,60 @@ export const BurgerProvider = ({ children }) => {
 
         if (foundItemIndex !== -1) {
           let updatedAddedItems = [...state.addedItems];
+
+          if (updatedAddedItems[foundItemIndex].id == 13) {
+            updatedAddedItems = updatedAddedItems.map((item, index) => {
+              if (index > foundItemIndex) {
+                return { ...item, top: item.top + 26 };
+              }
+              return item;
+            });
+          } else if (updatedAddedItems[foundItemIndex].id == 14) {
+            updatedAddedItems = updatedAddedItems.map((item, index) => {
+              if (index > foundItemIndex) {
+                return { ...item, top: item.top + 16 };
+              }
+              return item;
+            });
+          } else if (updatedAddedItems[foundItemIndex].id == 15) {
+            updatedAddedItems = updatedAddedItems.map((item, index) => {
+              if (index > foundItemIndex) {
+                return { ...item, top: item.top + 26 };
+              }
+              return item;
+            });
+          } else if (updatedAddedItems[foundItemIndex].id == 16) {
+            updatedAddedItems = updatedAddedItems.map((item, index) => {
+              if (index > foundItemIndex) {
+                return { ...item, top: item.top + 14 };
+              }
+              return item;
+            });
+          } else if (updatedAddedItems[foundItemIndex].id == 17) {
+            updatedAddedItems = updatedAddedItems.map((item, index) => {
+              if (index > foundItemIndex) {
+                return { ...item, top: item.top + 28 };
+              }
+              return item;
+            });
+          } else if (updatedAddedItems[foundItemIndex].id == 18) {
+            updatedAddedItems = updatedAddedItems.map((item, index) => {
+              if (index > foundItemIndex) {
+                return { ...item, top: item.top + 3 };
+              }
+              return item;
+            });
+          } else if (updatedAddedItems[foundItemIndex].id == 19) {
+            updatedAddedItems = updatedAddedItems.map((item, index) => {
+              if (index > foundItemIndex) {
+                return { ...item, top: item.top + 20 };
+              }
+              return item;
+            });
+          }
+
           updatedAddedItems = updatedAddedItems.filter(
-            (item, index) => index !== foundItemIndex,
+            (item, index) => index != foundItemIndex,
           );
 
           const updatedData = state.data.map((item) =>
