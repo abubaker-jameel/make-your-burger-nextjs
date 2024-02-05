@@ -272,7 +272,7 @@ export const BurgerProvider = ({ children }) => {
         if (foundItemIndex !== -1) {
           let updatedAddedItems = [...state.addedItems];
           updatedAddedItems = updatedAddedItems.filter(
-            (index) => index !== foundItemIndex,
+            (item, index) => index !== foundItemIndex,
           );
 
           const updatedData = state.data.map((item) =>
