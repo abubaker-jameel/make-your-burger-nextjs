@@ -5,13 +5,12 @@ import Image from "next/image";
 
 const BurgerElement = () => {
   const { burger } = useBurger();
-  console.log(burger);
 
   const burgerItem = burger.addedItems.map((item, index) => {
     if (item.id === 20) {
       return (
         <Image
-          key={item.id + 1}
+          key={item.id + index}
           src={item.src}
           fill
           alt={item.name}
@@ -28,7 +27,7 @@ const BurgerElement = () => {
     } else {
       return (
         <Image
-          key={item.id + index}
+          key={index + "burgerItem"}
           src={item.src}
           fill
           alt={item.name}
