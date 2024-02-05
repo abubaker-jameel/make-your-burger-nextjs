@@ -17,37 +17,37 @@ export default {
   icons: [
     {
       id: 6,
-      source: "/icons/visa.svg",
+      source: "/icons/visa-icon.svg",
       name: "visa",
     },
     {
       id: 7,
-      source: "/icons/master-card.svg",
+      source: "/icons/master-card-icon.svg",
       name: "master-card",
     },
     {
       id: 8,
-      source: "/icons/google-pay.svg",
+      source: "/icons/google-pay-icon.svg",
       name: "google-pay",
     },
     {
       id: 9,
-      source: "/icons/apple-pay.svg",
+      source: "/icons/apple-pay-icon.svg",
       name: "apple-pay",
     },
     {
       id: 10,
-      source: "/icons/paypal.svg",
+      source: "/icons/paypal-icon.svg",
       name: "paypal",
     },
     {
       id: 11,
-      source: "/icons/bitcoin.svg",
+      source: "/icons/bitcoin-icon.svg",
       name: "bitcoin",
     },
     {
       id: 12,
-      source: "/icons/etherium.svg",
+      source: "/icons/etherium-icon.svg",
       name: "etherium",
     },
   ],

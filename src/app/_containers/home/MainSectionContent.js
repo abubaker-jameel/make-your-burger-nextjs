@@ -21,14 +21,14 @@ const MainSectionContent = ({ title, paragraph, btnTitle }) => {
           fill
           className="hidden xl:block"
           alt="main-img"
-          priority={true}
+          priority
         />
         <Image
           src="/images/main-img-mob.svg"
           fill
           className="xl:hidden"
           alt="main-img-mobile"
-          priority={true}
+          priority
         />
       </div>
       <CircleBtn btnTitle={btnTitle} />

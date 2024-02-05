@@ -13,20 +13,19 @@ const IngredientContent = ({
   itemId,
 }) => {
   // count returning true and false to disable buttons
-  let addBtnDisabled = count >= 2 ? true : false;
-  let removeBtnDisabled = count <= 0 ? true : false;
+  let addBtnDisabled;
+  let removeBtnDisabled;
 
   // add button
   if (count >= 2 && itemId != 20) {
     addBtnDisabled = true;
-  } else {
+    removeBtnDisabled = false;
+  } else if (count <= 0 ? true : false) {
     addBtnDisabled = false;
-  }
-
-  if (count >= 1 && itemId == 20) {
+    removeBtnDisabled = true;
+  } else if (count >= 1 && itemId == 20) {
     addBtnDisabled = true;
-  } else {
-    addBtnDisabled = false;
+    removeBtnDisabled = false;
   }
 
   return (

@@ -5,7 +5,10 @@ import Icon from "@/app/_components/Icons/Icon";
 const RightFooterList = () => {
   const rightFooterItem = footerData.icons.map((item) => {
     return (
-      <li key={item.id} className="relative h-8 w-8 [&:not(:first-child)]:ml-2">
+      <li
+        key={item.id}
+        className="relative h-8 min-w-8 [&:not(:first-child)]:ml-2"
+      >
         <Icon src={item.source} alt={item.name} />
       </li>
     );
