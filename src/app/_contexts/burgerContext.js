@@ -15,6 +15,10 @@ export const BurgerProvider = ({ children }) => {
       energy: null,
       price: null,
     },
+    errors: {
+      bunTop: null,
+      limit: null,
+    },
   };
 
   function reducer(state, action) {
@@ -267,6 +271,27 @@ export const BurgerProvider = ({ children }) => {
             },
           };
         }
+
+        // bun top error
+        if (bunTopItem) {
+          return {
+            ...state,
+            errors: {
+              ...state.errors,
+              bunTop: true,
+            },
+          };
+        }
+        // limit the number of elements add error
+        if (state.addedItems.length < 4) {
+          return {
+            ...state,
+            errors: {
+              ...state.errors,
+              limit: true,
+            },
+          };
+        }
         return state;
       // remove item
       case "REMOVE_ITEM":
@@ -274,6 +299,7 @@ export const BurgerProvider = ({ children }) => {
         const itemToRemove = state.addedItems.find(
           (item) => item.id === itemIdToRemove && item.count > 0,
         );
+
         // Find the last occurrence of the item to remove from addedItems
         let foundItemIndex = -1;
         for (let i = state.addedItems.length - 1; i >= 0; i--) {
@@ -355,6 +381,7 @@ export const BurgerProvider = ({ children }) => {
               energy: state.total.energy - itemToRemove.energy,
               price: state.total.price - itemToRemove.price,
             };
+
             return {
               ...state,
               data: updatedData,
@@ -363,9 +390,16 @@ export const BurgerProvider = ({ children }) => {
             };
           }
         }
-
         return state;
-
+      case "RESET_ERRORS":
+        return {
+          ...state,
+          errors: {
+            ...state.errors,
+            bunTop: false,
+            limit: false,
+          },
+        };
       default:
         return state;
     }
@@ -379,10 +413,15 @@ export const BurgerProvider = ({ children }) => {
     dispatch({ type: "REMOVE_ITEM", payload: value });
   }
 
+  function handleResetErrors() {
+    dispatch({ type: "RESET_ERRORS" });
+  }
+
   const contextValues = {
     burger,
     handleAddItem,
     handleRemoveItem,
+    handleResetErrors,
   };
 
   return (
